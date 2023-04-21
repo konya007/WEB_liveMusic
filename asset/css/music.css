@@ -20,7 +20,7 @@
     display: flex;
     align-items: center;
     height: 100%;
-    width: 250px;
+    width: 200px;
     flex-shrink: 0;
 }
 
@@ -129,4 +129,20 @@
 #volume {
     cursor: pointer;
     width: 80px;
+}
+
+@media screen and (max-width: 700px) {
+    html {
+        font-size: 12px;
+    }
+    .volumeBox {
+        display: none;
+    }
+    #box-music {
+        width: 100vw;
+    }
+    .info-music-1 {
+        width: fit-content;
+        max-width: 110px;
+    }
 }

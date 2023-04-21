@@ -12,7 +12,6 @@
 
 body {
     position: relative;
-    overflow: hidden;
 }
 
 .box {
@@ -29,6 +28,7 @@ body {
     width: 100vw;
     height: 100vh;
     display: flex;
+    display: none;
 }
 
 .typeid-box {
@@ -104,4 +104,20 @@ body {
     position: absolute;
     width: 100vw;
     height: 100vh;
+    overflow: hidden;
+}
+
+@media screen and (max-width: 700px) {
+    html {
+        font-size: 12px;
+    }
+    .volumeBox {
+        display: none;
+    }
+    #box-music {
+        width: 100vw;
+    }
+    .info-music-1 {
+        width: 100px;
+    }
 }
