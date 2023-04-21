@@ -39,8 +39,8 @@ function clientInt() {
         } else {
             pauseAudioMain()
         }
-        if (Math.abs(dataClient["time"] - audioMain.currentTime) > 2) {
-            audioMain.currentTime = dataClient["time"] + 2
+        if (Math.abs(dataClient["time"] - audioMain.currentTime) > 1) {
+            audioMain.currentTime = dataClient["time"] + 1.5
         }
         console.log("ok Client")
     }, 2000)
