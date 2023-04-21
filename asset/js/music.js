@@ -17,6 +17,46 @@ var audioMain
 var statusPlay = 'pause'
 var nSong = 0
 var cooldown = false
+init()
+
+function activeBtn() {
+
+    controlBtn[1].onclick = async(e) => {
+        if (nSong > 0) {
+            if (cooldown == false) {
+                pauseAudioMain()
+                await APIMusic(1)
+                nSong--;
+                audioMain = new Audio(jsonAlbum[nSong]["link"])
+                updateInfoMusic()
+                playAudioMain()
+            }
+            checkCooldown()
+        }
+    }
+
+    controlBtn[3].onclick = async(e) => {
+        if (nSong < jsonAlbum.length - 1) {
+            if (cooldown == false) {
+                pauseAudioMain()
+                await APIMusic(1)
+                nSong++;
+                audioMain = new Audio(jsonAlbum[nSong]["link"])
+                updateInfoMusic()
+                playAudioMain()
+            }
+            checkCooldown()
+        }
+    }
+
+    controlBtn[2].onclick = (e) => {
+        if (statusPlay == 'pause') {
+            playAudioMain()
+        } else {
+            pauseAudioMain()
+        }
+    }
+}
 
 setInterval(async(e) => {
     timeLength.innerText = fommatTime(audioMain.duration)
@@ -62,13 +102,7 @@ function pauseAudioMain() {
     audioMain.pause()
 }
 
-controlBtn[2].onclick = (e) => {
-    if (statusPlay == 'pause') {
-        playAudioMain()
-    } else {
-        pauseAudioMain()
-    }
-}
+
 
 document.onkeydown = (e) => {
         if (e.key == ' ') {
@@ -77,33 +111,7 @@ document.onkeydown = (e) => {
     }
     //Chuyển bài
 
-controlBtn[1].onclick = async(e) => {
-    if (nSong > 0) {
-        if (cooldown == false) {
-            pauseAudioMain()
-            await APIMusic(1)
-            nSong--;
-            audioMain = new Audio(jsonAlbum[nSong]["link"])
-            updateInfoMusic()
-            playAudioMain()
-        }
-        checkCooldown()
-    }
-}
 
-controlBtn[3].onclick = async(e) => {
-    if (nSong < jsonAlbum.length - 1) {
-        if (cooldown == false) {
-            pauseAudioMain()
-            await APIMusic(1)
-            nSong++;
-            audioMain = new Audio(jsonAlbum[nSong]["link"])
-            updateInfoMusic()
-            playAudioMain()
-        }
-        checkCooldown()
-    }
-}
 
 function checkCooldown() {
     if (cooldown == true) {

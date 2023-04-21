@@ -18,28 +18,29 @@ function hostInt() {
         }, idJson)
         console.log("ok Host")
     }, 2000)
+    activeBtn()
 }
 
 function clientInt() {
-    controlBtn[2].innerHTML = DOMStatusControl[0]
-    audioMain.volume = 0.1
-    volumebar.value = 2
+    init()
     setInterval(async() => {
-        dataClient = await getDataRoomClient(idJson)
+        await getDataRoomClient(idJson)
         if (nSong != dataClient["n"]) {
             nSong = dataClient["n"]
             pauseAudioMain()
             await APIMusic(1)
             audioMain = new Audio(jsonAlbum[nSong]["link"])
             updateInfoMusic()
+            playAudioMain()
+
         }
         if (dataClient["status"] == 'play') {
             playAudioMain()
         } else {
             pauseAudioMain()
         }
-        if (Math.abs(dataClient["time"] - audioMain.currentTime) > 5) {
-            audioMain.currentTime = dataClient["time"]
+        if (Math.abs(dataClient["time"] - audioMain.currentTime) > 2) {
+            audioMain.currentTime = dataClient["time"] + 2
         }
         console.log("ok Client")
     }, 2000)
@@ -64,5 +65,5 @@ async function getDataRoomClient(id) {
         if (res.ok) {
             return res.json();
         }
-    }).then(data => jsonRoom = data).catch(error => { alert("Có lỗi. Vui lòng thử lại!") })
+    }).then(data => dataClient = data).catch(error => { alert("Có lỗi. Vui lòng thử lại!") })
 }
