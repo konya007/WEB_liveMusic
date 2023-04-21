@@ -1,0 +1,107 @@
+:root {
+    --border: #000000;
+    --color-text: #fff;
+}
+
+* {
+    transition: all .1s linear;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    position: relative;
+    overflow: hidden;
+}
+
+.box {
+    border: 1px solid var(--border);
+    border-radius: 15px;
+}
+
+
+/* sence1 - type ID room */
+
+#sence1 {
+    position: absolute;
+    background-color: rgba(54, 54, 54, 0.7);
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+}
+
+.typeid-box {
+    width: 500px;
+    height: 300px;
+    margin: auto;
+    backdrop-filter: blur(10px);
+    padding: 20px;
+}
+
+.typeid-box>div {
+    display: flex;
+    gap: 10px;
+}
+
+.typeid-box>p {
+    color: var(--color-text);
+    font-size: 1.2rem;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 8px;
+}
+
+#id-join {
+    width: 100%;
+    background-color: transparent;
+    outline: none;
+    border: 0;
+    border-bottom: 1px solid #7e7e7e;
+    color: var(--color-text);
+    opacity: 0.5;
+    padding: 8px;
+    font-size: 1.8rem;
+}
+
+#id-join:focus {
+    opacity: 1;
+    border-bottom: 1px solid var(--border);
+}
+
+#join {
+    cursor: pointer;
+    flex-shrink: 0;
+    outline: none;
+    border: 1px solid var(--border);
+    background-color: transparent;
+    padding: 5px;
+    border-radius: 20px;
+    color: var(--color-text);
+    font-size: 1.3rem;
+}
+
+#join:hover {
+    background-color: #0099ff;
+}
+
+#myId {
+    width: fit-content;
+    background-color: transparent;
+    outline: none;
+    border: 0;
+    border-bottom: 1px solid var(--border);
+    color: var(--color-text);
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 8px;
+    font-size: 2rem;
+    font-style: italic;
+}
+
+
+/* sence1 - type ID room */
+
+#sence2 {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+}

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phòng nghe nhạc chung!</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
+    <link rel="shortcut icon" href="./asset/img/icon.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="./asset/css/main.css">
+    <link rel="stylesheet" href="./asset/css/music.css">
+</head>
+
+<body>
+    <div id="sence2">
+        <div id="background">
+            <img src="./asset/img/Ft93GWOWAAIHHNJ.jpg" alt="">
+        </div>
+        <div id="box-music">
+            <div class="info-music-1">
+                <div class="thumbnail-music type1"></div>
+                <div class="text-info-music-1">
+                    <p class="name-song">AAAAAAAA</p>
+                    <p class="name-singer">AAAAAA</p>
+                </div>
+            </div>
+            <div id="control-music">
+                <div id="control-btn-box">
+                    <div class="control-items">
+                        <i class="fa-solid fa-rotate-left"></i>
+                    </div>
+                    <div class="control-items">
+                        <i class="fa-solid fa-backward-step"></i>
+                    </div>
+                    <div class="control-items" id="statusControl">
+                        <i class="fa-solid fa-play"></i>
+                    </div>
+                    <div class="control-items">
+                        <i class="fa-solid fa-forward-step"></i>
+                    </div>
+                    <div class="control-items">
+                        <i class="fa-solid fa-shuffle"></i>
+                    </div>
+                </div>
+                <div id="timeline-box">
+                    <p id="time-now">--:--</p>
+                    <div id="progbar">
+                        <div id="progbar2">
+                        </div>
+                    </div>
+                    <p id="time-dur">--:--</p>
+                </div>
+            </div>
+            <div class="volumeBox">
+                <i class="fa-solid fa-volume-high"></i>
+                <input id="volume" type="range" min="0" max="20">
+            </div>
+        </div>
+    </div>
+    <div id="sence1">
+        <div class="box typeid-box">
+            <p>Nhập ID phòng: </p>
+            <div>
+                <input type="text" name="" id="id-join" placeholder="ID phòng?">
+                <input type="submit" id="join" value="Tham gia">
+            </div>
+            <p>-------- Hoặc --------</p>
+
+            <p>Phòng của bạn là: </p>
+            <div id="myId">
+                - - - - - -
+            </div>
+        </div>
+    </div>
+</body>
+<script src="./asset/js/prepare.js"></script>
+<script src="./asset/js/music.js"></script>
+<script src="./asset/js/interact.js"></script>
+
+</html>
