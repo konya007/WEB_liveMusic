@@ -28,6 +28,7 @@ body {
     width: 100vw;
     height: 100vh;
     display: flex;
+    z-index: 999;
 }
 
 .typeid-box {
@@ -101,7 +102,181 @@ body {
 
 #sence2 {
     position: absolute;
+    display: flex;
     width: 100vw;
     height: 100vh;
     overflow: hidden;
+}
+
+#background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+}
+
+#background>img {
+    height: 100%;
+    object-fit: cover;
+}
+
+#header-bar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    backdrop-filter: blur(10px) brightness(70%);
+    height: 4rem;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 0 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.4rem;
+    color: var(--color-text);
+    justify-content: space-between;
+}
+
+#header-bar>div {
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+#header-bar>div>p {
+    margin: 0 10px;
+}
+
+#idRoomNow {
+    border: 2px solid var(--color-text);
+    height: 90%;
+    width: fit-content;
+    padding: 7px 10px;
+    border-radius: 20px;
+    font-size: 2.2rem;
+    background-color: #00000098;
+}
+
+#logo {
+    height: 90%;
+    aspect-ratio: 1;
+    overflow: hidden;
+    border-radius: 50%;
+}
+
+#logo>img {
+    width: 100%;
+}
+
+#role {
+    font-weight: 600;
+    font-style: italic;
+}
+
+
+/* Main */
+
+#main-box {
+    margin: auto;
+    height: calc( 100% - 12rem);
+    width: 90%;
+    max-width: 1000px;
+    z-index: 1;
+}
+
+.mainboxitem {
+    margin-bottom: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 10px;
+    border-radius: 20px;
+    font-size: 1.4rem;
+    color: var(--color-text);
+    border: 1px solid #00000073;
+    backdrop-filter: blur(10px) brightness(70%);
+}
+
+.listener-box {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+#listenerNow {
+    font-size: 1.8rem;
+}
+
+#plbox {
+    margin: auto;
+    max-width: 600px;
+    min-width: 400px;
+    width: 50%;
+    height: 500px;
+    border: 1px solid #7e7e7e;
+    border-radius: 20px;
+    overflow-y: auto;
+    background-color: #00000068;
+}
+
+
+/* item song */
+
+.itemsongPl {
+    user-select: none;
+    cursor: pointer;
+    margin: 5px auto;
+    width: 90%;
+    padding: 5px 10px;
+    border-radius: 10px;
+    border: 1px solid #fff;
+    display: flex;
+    align-items: center;
+    color: #cecece;
+}
+
+.avtSongPlbox {
+    height: 4rem;
+    aspect-ratio: 1;
+    border-radius: 10%;
+    overflow: hidden;
+}
+
+.avtSongPl {
+    height: 100%;
+}
+
+.infoSongPl {
+    margin-left: 10px;
+}
+
+.infoSongPl>p:nth-child(1) {}
+
+.infoSongPl>p:nth-child(2) {
+    font-size: 1rem;
+}
+
+.playnow {
+    color: #fff;
+    animation: playing 1s infinite;
+}
+
+@keyframes playing {
+    0% {
+        translate: 0 0px;
+        background-color: transparent;
+    }
+    20% {
+        translate: 0 6px;
+    }
+    40% {
+        translate: 0 0px;
+    }
+    60% {
+        translate: 0 3px;
+    }
+    80% {
+        translate: 0 0px;
+    }
+    100% {
+        translate: 0 0px;
+    }
 }

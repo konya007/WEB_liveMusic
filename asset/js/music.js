@@ -7,7 +7,12 @@ const statusControl = document.getElementById("statusControl")
 const timeNow = document.getElementById("time-now")
 const timeLength = document.getElementById("time-dur")
 const progBar = document.getElementById("progbar2")
+const durBarHover = document.getElementById("progbar3")
+const durBar = document.getElementById("progbar")
 const volumebar = document.getElementById("volume")
+
+const playListBox = document.getElementById("plbox")
+var itemPlayList
 
 
 
@@ -17,7 +22,9 @@ var audioMain
 var statusPlay = 'pause'
 var nSong = 0
 var cooldown = false
-init()
+
+var volMusic = 0.5
+var volInput = 10
 
 function activeBtn() {
 
@@ -58,14 +65,18 @@ function activeBtn() {
     }
 }
 
-setInterval(async(e) => {
-    timeLength.innerText = fommatTime(audioMain.duration)
-    timeNow.innerText = fommatTime(audioMain.currentTime)
-    progBar.style.width = (audioMain.currentTime / audioMain.duration) * 100 + "%"
-}, 500)
+durBar.onclick = (e) => {
+    audioMain.currentTime = audioMain.duration * (e.offsetX / durBar.offsetWidth)
+}
+
+durBar.onmousemove = (e) => {
+    durBarHover.style.width = e.offsetX + 'px'
+}
 
 volumebar.oninput = (e) => {
-    audioMain.volume = (volumebar.value / 20)
+    volInput = volumebar.value
+    volMusic = (volumebar.value / 20)
+    audioMain.volume = volMusic
 }
 
 function updateInfoMusic() {
@@ -80,23 +91,45 @@ function updateInfoMusic() {
     }
 }
 
+
+var cooldownAutoNext = false
 async function init() {
     controlBtn[2].innerHTML = DOMStatusControl[0]
     await APIMusic(1)
     audioMain = new Audio(jsonAlbum[nSong]["link"])
-    audioMain.volume = 0.1
-    volumebar.value = 2
+    audioMain.volume = volMusic
+    volumebar.value = volInput
     updateInfoMusic()
+    setInterval(async(e) => {
+        timeLength.innerText = fommatTime(audioMain.duration)
+        timeNow.innerText = fommatTime(audioMain.currentTime)
+        progBar.style.width = (audioMain.currentTime / audioMain.duration) * 100 + "%"
+        if (cooldownAutoNext == false) {
+            if (audioMain.currentTime >= audioMain.duration && roleAd) {
+                setTimeout(async() => {
+                    await controlBtn[3].onclick()
+                }, 500)
+                cooldownAutoNext = true
+                setTimeout(() => {
+                    cooldownAutoNext = false
+                }, 3000)
+            }
+
+        }
+
+    }, 500)
 }
 
 function playAudioMain() {
+    itemPlayList[nSong].classList.add("playnow")
     statusPlay = 'play'
     audioMain.play()
     controlBtn[2].innerHTML = DOMStatusControl[1]
-
+    audioMain.volume = volMusic
 }
 
 function pauseAudioMain() {
+    itemPlayList[nSong].classList.remove("playnow")
     controlBtn[2].innerHTML = DOMStatusControl[0]
     statusPlay = 'pause'
     audioMain.pause()
@@ -147,6 +180,40 @@ async function APIMusic(x, y) {
         }).catch(error => {
             alert("Có lỗi! Vui lòng thử lại!!!")
         })
+    }
+    await updatePl()
+
+}
+
+async function updatePl() {
+    playListBox.innerHTML = ""
+    for (let i = 0; i < jsonAlbum.length; i++) {
+        playListBox.innerHTML += `
+        <div class="itemsongPl">
+            <div class="avtSongPlbox">
+                <img class="avtSongPl" src="${jsonAlbum[i]["img"]}" alt="">
+            </div>
+            <div class="infoSongPl">
+                <p>${jsonAlbum[i]["name"]}</p>
+                <p>${jsonAlbum[i]["singer"]}</p>
+            </div>
+        </div>`
+    }
+    itemPlayList = document.getElementsByClassName("itemsongPl")
+    if (roleAd) {
+        for (let i = 0; i < jsonAlbum.length; i++) {
+            itemPlayList[i].onclick = async(e) => {
+                if (cooldown == false) {
+                    pauseAudioMain()
+                    await APIMusic(1)
+                    nSong = i;
+                    audioMain = new Audio(jsonAlbum[nSong]["link"])
+                    updateInfoMusic()
+                    playAudioMain()
+                }
+                checkCooldown()
+            }
+        }
     }
 
 }

@@ -1,15 +1,25 @@
 var dataClient
+const idRoomNow = document.getElementById("idRoomNow")
+const roleRoomNow = document.getElementById("role")
+var roleAd = false
 
 async function startInteract() {
+
+    idRoomNow.innerText = idNow
     if (idNow == localStorage.getItem("MyID")) {
         await hostInt()
+        roleRoomNow.innerText = "Chủ phòng"
+        roleAd = true
     } else {
         await clientInt()
+        roleRoomNow.innerText = "Khách"
     }
+    init()
+
 }
 
 function hostInt() {
-    init()
+
     setInterval(async() => {
         await setDataRoomHost({
             "n": nSong,
@@ -18,14 +28,18 @@ function hostInt() {
             "nowTime": Date.now() / 1000,
         }, idJson)
         console.log("ok Host")
-    }, 2000)
+    }, 3000)
     activeBtn()
 }
 
 function clientInt() {
-    init()
+
     setInterval(async() => {
         await getDataRoomClient(idJson)
+        if ((Date.now() / 1000) - dataClient["nowTime"] > 5) {
+            idRoomNow.innerText = "Đã kết thúc!"
+            alert("Chủ phòng đã rời buổi phát nhạc!")
+        }
         if (nSong != dataClient["n"]) {
             nSong = dataClient["n"]
             pauseAudioMain()
@@ -36,17 +50,23 @@ function clientInt() {
 
         }
         if (dataClient["status"] == 'play') {
-            playAudioMain()
+            if (statusPlay == 'pause') {
+                playAudioMain()
+            }
+            var timeTemp = dataClient["time"] + ((Date.now() / 1000) - dataClient["nowTime"])
+            if (Math.abs(timeTemp - audioMain.currentTime) > 0.08) {
+                audioMain.currentTime = timeTemp
+            }
 
         } else {
-            pauseAudioMain()
+            if (statusPlay == 'play') {
+                pauseAudioMain()
+            }
+
         }
-        var timeTemp = dataClient["time"] + ((Date.now() / 1000) - dataClient["nowTime"])
-        if (Math.abs(timeTemp - audioMain.currentTime) > 0.05) {
-            audioMain.currentTime = timeTemp
-        }
+
         console.log("ok Client")
-    }, 2000)
+    }, 3000)
 }
 
 async function setDataRoomHost(y, id) {

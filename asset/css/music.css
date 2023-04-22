@@ -101,6 +101,7 @@
 }
 
 #progbar {
+    cursor: pointer;
     position: relative;
     width: 70%;
     height: 6px;
@@ -110,8 +111,25 @@
 }
 
 #progbar2 {
+    position: absolute;
+    left: 0;
+    top: 0;
     width: 0;
     background-color: rgb(0, 136, 255);
+    height: 10px;
+}
+
+#progbar:hover #progbar3 {
+    display: block;
+}
+
+#progbar3 {
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 0px;
+    background-color: rgba(0, 0, 0, 0.372);
     height: 10px;
 }
 
