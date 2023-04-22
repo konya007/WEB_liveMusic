@@ -120,7 +120,7 @@ function checkCooldown() {
         cooldown = true
         setTimeout(() => {
             cooldown = false
-        }, 2000)
+        }, 1000)
     }
 }
 

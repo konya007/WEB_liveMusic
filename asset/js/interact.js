@@ -15,6 +15,7 @@ function hostInt() {
             "n": nSong,
             "time": audioMain.currentTime,
             "status": statusPlay,
+            "nowTime": Date.now() / 1000,
         }, idJson)
         console.log("ok Host")
     }, 2000)
@@ -36,11 +37,13 @@ function clientInt() {
         }
         if (dataClient["status"] == 'play') {
             playAudioMain()
+
         } else {
             pauseAudioMain()
         }
-        if (Math.abs(dataClient["time"] - audioMain.currentTime) > 1) {
-            audioMain.currentTime = dataClient["time"] + 1.5
+        var timeTemp = dataClient["time"] + ((Date.now() / 1000) - dataClient["nowTime"])
+        if (Math.abs(timeTemp - audioMain.currentTime) > 0.05) {
+            audioMain.currentTime = timeTemp
         }
         console.log("ok Client")
     }, 2000)
