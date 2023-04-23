@@ -1,15 +1,42 @@
 [{
-        "name": "Hitorinbo Envy",
-        "singer": "25-ji, Nightcord de.",
-        "link": "https://cdn.glitch.global/dc6948cb-dff5-4efc-86db-fe258b6f1750/Hitorinbo_Envy.mp3",
-        "img": "https://cdn.glitch.global/dc6948cb-dff5-4efc-86db-fe258b6f1750/Hitorinbo_Envy.png"
+        "name": "Requiem",
+        "singer": "Kanaria & Hatsume Miku",
+        "link": "https://cdn.glitch.global/dc6948cb-dff5-4efc-86db-fe258b6f1750/Requiem.mp3",
+        "img": "https://i.ytimg.com/vi/94FQd3qSoz8/maxresdefault.jpg"
+    }, {
+        "name": "Guitar, Loneliness and Blue Planet",
+        "singer": "Kessoku Band",
+        "link": "https://cdn.glitch.global/dc6948cb-dff5-4efc-86db-fe258b6f1750/Guitar%2C%20Loneliness%20and%20Blue%20Planet.mp3",
+        "img": "https://www.aniplexplus.com/on/demandware.static/-/Sites-all-master-catalog/ja_JP/dw0ee6a329/items/title-H/bocchi-rocks/PKG/ALBUM/600_JK.jpg"
+    }, {
+        "name": "Phony",
+        "singer": "Hoshimachi Suisei",
+        "link": "https://cdn.glitch.global/dc6948cb-dff5-4efc-86db-fe258b6f1750/Phony.mp3",
+        "img": "https://i1.sndcdn.com/artworks-FPruDZM0FJ52zmqB-O5UqHg-t500x500.jpg"
+    }, {
+        "name": "KickBack",
+        "singer": "Kenshi Yonezu",
+        "link": "https://cdn.glitch.global/dc6948cb-dff5-4efc-86db-fe258b6f1750/Kick%20Back%20-%20Kenshi%20Yonezu.mp3",
+        "img": "https://avatar-ex-swe.nixcdn.com/song/2022/10/12/a/8/5/9/1665562332462_640.jpg"
+    },
+    {
+        "name": "Compared Child",
+        "singer": "TUYU",
+        "link": "https://cdn.glitch.global/dc6948cb-dff5-4efc-86db-fe258b6f1750/Compared%20Child.mp3",
+        "img": "https://i.kfs.io/album/global/77276961,0v1/fit/500x500.jpg"
     },
     {
         "name": "Idol",
         "singer": "Yoasobi",
         "link": "https://cdn.glitch.global/dc6948cb-dff5-4efc-86db-fe258b6f1750/Idol.mp3",
         "img": "https://cdn.glitch.global/dc6948cb-dff5-4efc-86db-fe258b6f1750/Idol.jpg"
+    }, {
+        "name": "Hitorinbo Envy",
+        "singer": "25-ji, Nightcord de.",
+        "link": "https://cdn.glitch.global/dc6948cb-dff5-4efc-86db-fe258b6f1750/Hitorinbo_Envy.mp3",
+        "img": "https://cdn.glitch.global/dc6948cb-dff5-4efc-86db-fe258b6f1750/Hitorinbo_Envy.png"
     },
+
     {
         "name": "Samsa",
         "singer": "25-ji, Nightcord de.",

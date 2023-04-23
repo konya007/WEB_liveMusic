@@ -6,7 +6,7 @@ var roleAd = false
 async function startInteract() {
 
     idRoomNow.innerText = idNow
-    if (idNow == localStorage.getItem("MyID")) {
+    if (idNow == localStorage.getItem("MyIDv2")) {
         await hostInt()
         roleRoomNow.innerText = "Chủ phòng"
         roleAd = true

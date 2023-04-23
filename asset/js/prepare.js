@@ -24,6 +24,7 @@ idInputBtn.onclick = async(e) => {
             }
         }
     }
+
 }
 
 function initIdRoom() {
@@ -41,9 +42,9 @@ function initIdRoom() {
 
 async function initClient() {
     await getDataRoom()
-    if (!localStorage.getItem("MyID")) {
+    if (!localStorage.getItem("MyIDv2")) {
         var myidroom = initIdRoom()
-        localStorage.setItem("MyID", myidroom)
+        localStorage.setItem("MyIDv2", myidroom)
         await setDataRoom({
             "idroom": myidroom,
             "n": 0,
@@ -51,7 +52,7 @@ async function initClient() {
             "status": "pause"
         })
     }
-    displayMyID.innerText = localStorage.getItem("MyID")
+    displayMyID.innerText = localStorage.getItem("MyIDv2")
 }
 
 async function getDataRoom() {
