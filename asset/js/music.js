@@ -66,7 +66,10 @@ function activeBtn() {
 }
 
 durBar.onclick = (e) => {
-    audioMain.currentTime = audioMain.duration * (e.offsetX / durBar.offsetWidth)
+    if (roleAd) {
+        audioMain.currentTime = audioMain.duration * (e.offsetX / durBar.offsetWidth)
+
+    }
 }
 
 durBar.onmousemove = (e) => {
