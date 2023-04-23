@@ -38,7 +38,8 @@ function clientInt() {
         await getDataRoomClient(idJson)
         if ((Date.now() / 1000) - dataClient["nowTime"] > 5) {
             idRoomNow.innerText = "Đã kết thúc!"
-            alert("Chủ phòng đã rời buổi phát nhạc!")
+        } else {
+            idRoomNow.innerText = idRoomNow
         }
         if (nSong != dataClient["n"]) {
             nSong = dataClient["n"]
