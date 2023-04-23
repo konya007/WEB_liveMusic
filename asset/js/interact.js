@@ -39,7 +39,7 @@ function clientInt() {
         if ((Date.now() / 1000) - dataClient["nowTime"] > 5) {
             idRoomNow.innerText = "Đã kết thúc!"
         } else {
-            idRoomNow.innerText = idRoomNow
+            idRoomNow.innerText = idNow
         }
         if (nSong != dataClient["n"]) {
             nSong = dataClient["n"]
