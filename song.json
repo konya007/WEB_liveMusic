@@ -30,7 +30,15 @@
         "singer": "Yoasobi",
         "link": "https://cdn.glitch.global/dc6948cb-dff5-4efc-86db-fe258b6f1750/Idol.mp3",
         "img": "https://cdn.glitch.global/dc6948cb-dff5-4efc-86db-fe258b6f1750/Idol.jpg"
-    }, {
+    },
+    {
+        "name": "Fight Song",
+        "singer": "Eve",
+        "link": "https://cdn.glitch.global/dc6948cb-dff5-4efc-86db-fe258b6f1750/Fight%20Song%20%20-%20Eve.mp3",
+        "img": "https://cdn.glitch.global/dc6948cb-dff5-4efc-86db-fe258b6f1750/cover.jpg"
+    },
+
+    {
         "name": "Hitorinbo Envy",
         "singer": "25-ji, Nightcord de.",
         "link": "https://cdn.glitch.global/dc6948cb-dff5-4efc-86db-fe258b6f1750/Hitorinbo_Envy.mp3",
@@ -66,5 +74,15 @@
         "singer": "MORE MORE JUMP! & Hatsune Miku",
         "link": "https://cdn.glitch.global/dc6948cb-dff5-4efc-86db-fe258b6f1750/Shoujo_Rei.mp3",
         "img": "https://cdn.glitch.global/dc6948cb-dff5-4efc-86db-fe258b6f1750/Shoujo_rei.webp"
+    }, {
+        "name": "Nhạc Lofi #1: Tập trung",
+        "singer": "Angel Soul 天使の魂",
+        "link": "https://cdn.glitch.me/dc6948cb-dff5-4efc-86db-fe258b6f1750/lofi1.mp3",
+        "img": "https://i.ytimg.com/vi/REEr7EAl12k/maxresdefault.jpg"
+    }, {
+        "name": "Nhạc Lofi #2: Thư Giãn",
+        "singer": "Angel Soul 天使の魂",
+        "link": "https://cdn.glitch.me/dc6948cb-dff5-4efc-86db-fe258b6f1750/lofi2.mp3",
+        "img": "https://i.ytimg.com/vi/REEr7EAl12k/maxresdefault.jpg"
     }
 ]

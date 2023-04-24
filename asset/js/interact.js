@@ -1,7 +1,10 @@
 var dataClient
 const idRoomNow = document.getElementById("idRoomNow")
 const roleRoomNow = document.getElementById("role")
+const checkAdFree = document.getElementById("checkAdFree")
+    // const mainboxitem = document.getElementsByClassName("mainboxitem")
 var roleAd = false
+var permisAD = false
 
 async function startInteract() {
 
@@ -13,9 +16,18 @@ async function startInteract() {
     } else {
         await clientInt()
         roleRoomNow.innerText = "Khách"
+            // mainboxitem[1].style.display = "none"
     }
     init()
 
+}
+
+checkAdFree.oninput = () => {
+    if (checkAdFree.checked) {
+        permisAD = true
+    } else {
+        permisAD = false
+    }
 }
 
 function hostInt() {
@@ -26,6 +38,7 @@ function hostInt() {
             "time": audioMain.currentTime,
             "status": statusPlay,
             "nowTime": Date.now() / 1000,
+            // "freehost": permisAD,
         }, idJson)
         console.log("ok Host")
     }, 3000)
@@ -36,6 +49,11 @@ function clientInt() {
 
     setInterval(async() => {
         await getDataRoomClient(idJson)
+            // if (dataClient["freehost"]) {
+            //     roleAd = true
+            // } else {
+            //     roleAd = false
+            // }
         if ((Date.now() / 1000) - dataClient["nowTime"] > 5) {
             idRoomNow.innerText = "Đã kết thúc!"
         } else {

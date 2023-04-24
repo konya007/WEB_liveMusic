@@ -151,7 +151,7 @@
 
 @media screen and (max-width: 700px) {
     html {
-        font-size: 12px;
+        font-size: 14px;
     }
     .volumeBox {
         display: none;
@@ -159,8 +159,14 @@
     #box-music {
         width: 100vw;
     }
+    .thumbnail-music {
+        height: 50px;
+    }
     .info-music-1 {
-        width: fit-content;
-        max-width: 110px;
+        width: 100%;
+    }
+    #box-music {
+        display: block;
+        height: fit-content;
     }
 }
