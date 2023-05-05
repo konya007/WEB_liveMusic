@@ -17,6 +17,7 @@ async function startInteract() {
         await clientInt()
         roleRoomNow.innerText = "Khách"
             // mainboxitem[1].style.display = "none"
+        document.documentElement.style.setProperty("--cur", "no-drop")
     }
     init()
 
@@ -38,6 +39,7 @@ function hostInt() {
             "time": audioMain.currentTime,
             "status": statusPlay,
             "nowTime": Date.now() / 1000,
+            "more": [loop, shuffle],
             // "freehost": permisAD,
         }, idJson)
         console.log("ok Host")
@@ -48,12 +50,23 @@ function hostInt() {
 function clientInt() {
 
     setInterval(async() => {
+
         await getDataRoomClient(idJson)
             // if (dataClient["freehost"]) {
             //     roleAd = true
             // } else {
             //     roleAd = false
             // }
+        if (dataClient.more[0]) {
+            controlBtn[0].classList.add("ctrlBtnAtv")
+        } else {
+            controlBtn[0].classList.remove("ctrlBtnAtv")
+        }
+        if (dataClient.more[1]) {
+            controlBtn[4].classList.add("ctrlBtnAtv")
+        } else {
+            controlBtn[4].classList.remove("ctrlBtnAtv")
+        }
         if ((Date.now() / 1000) - dataClient["nowTime"] > 5) {
             idRoomNow.innerText = "Đã kết thúc!"
         } else {

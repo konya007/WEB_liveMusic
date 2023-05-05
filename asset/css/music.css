@@ -54,6 +54,7 @@
 }
 
 #control-btn-box {
+    font-size: 16px;
     height: 60%;
     display: flex;
     align-items: center;
@@ -62,7 +63,7 @@
 }
 
 .control-items {
-    cursor: pointer;
+    cursor: var(--cur);
     aspect-ratio: 1;
     display: flex;
     color: #fff;
@@ -71,23 +72,28 @@
 
 .control-items:nth-child(3) {
     height: 100%;
-    font-size: 2rem;
+    font-size: 2em;
 }
 
 .control-items:nth-child(1),
 .control-items:nth-child(5) {
     height: 70%;
-    font-size: 1.2rem;
+    font-size: 1.2em;
 }
 
 .control-items:nth-child(2),
 .control-items:nth-child(4) {
-    font-size: 1.4rem;
+    font-size: 1.4em;
     height: 80%;
 }
 
 .control-items>i {
     margin: auto;
+}
+
+.ctrlBtnAtv {
+    color: rgb(109, 228, 255);
+    text-shadow: 0 0 10px #00f2ff;
 }
 
 #timeline-box {
@@ -168,5 +174,8 @@
     #box-music {
         display: block;
         height: fit-content;
+    }
+    #control-btn-box {
+        gap: 26px;
     }
 }

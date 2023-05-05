@@ -23,17 +23,41 @@ var statusPlay = 'pause'
 var nSong = 0
 var cooldown = false
 
+var loop = false
+var shuffle = false
+
 var volMusic = 0.5
 var volInput = 10
 
 function activeBtn() {
-
+    controlBtn[0].onclick = () => {
+        if (loop == false) {
+            loop = true;
+            controlBtn[0].classList.add("ctrlBtnAtv")
+        } else {
+            loop = false;
+            controlBtn[0].classList.remove("ctrlBtnAtv")
+        }
+    }
+    controlBtn[4].onclick = () => {
+        if (shuffle == false) {
+            shuffle = true;
+            controlBtn[4].classList.add("ctrlBtnAtv")
+        } else {
+            shuffle = false;
+            controlBtn[4].classList.remove("ctrlBtnAtv")
+        }
+    }
     controlBtn[1].onclick = async(e) => {
-        if (nSong > 0) {
+        if (nSong > 0 || shuffle == true) {
             if (cooldown == false) {
                 pauseAudioMain()
+                if (shuffle == true) {
+                    nSong = Math.floor(Math.random() * jsonAlbum.length)
+                } else {
+                    nSong--;
+                }
                 await APIMusic(1)
-                nSong--;
                 audioMain = new Audio(jsonAlbum[nSong]["link"])
                 updateInfoMusic()
                 playAudioMain()
@@ -46,8 +70,12 @@ function activeBtn() {
         if (nSong < jsonAlbum.length - 1) {
             if (cooldown == false) {
                 pauseAudioMain()
+                if (shuffle == true || shuffle == true) {
+                    nSong = Math.floor(Math.random() * jsonAlbum.length)
+                } else {
+                    nSong++;
+                }
                 await APIMusic(1)
-                nSong++;
                 audioMain = new Audio(jsonAlbum[nSong]["link"])
                 updateInfoMusic()
                 playAudioMain()
@@ -103,19 +131,25 @@ async function init() {
     audioMain.volume = volMusic
     volumebar.value = volInput
     updateInfoMusic()
+
+
     setInterval(async(e) => {
         timeLength.innerText = fommatTime(audioMain.duration)
         timeNow.innerText = fommatTime(audioMain.currentTime)
         progBar.style.width = (audioMain.currentTime / audioMain.duration) * 100 + "%"
         if (cooldownAutoNext == false) {
             if (audioMain.currentTime >= audioMain.duration && roleAd) {
-                setTimeout(async() => {
-                    await controlBtn[3].onclick()
-                }, 500)
-                cooldownAutoNext = true
-                setTimeout(() => {
-                    cooldownAutoNext = false
-                }, 3000)
+                if (loop == true) {
+                    audioMain.play()
+                } else {
+                    setTimeout(async() => {
+                        await controlBtn[3].onclick()
+                    }, 500)
+                    cooldownAutoNext = true
+                    setTimeout(() => {
+                        cooldownAutoNext = false
+                    }, 3000)
+                }
             }
 
         }

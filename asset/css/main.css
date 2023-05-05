@@ -1,6 +1,7 @@
 :root {
     --border: #000000;
     --color-text: #fff;
+    --cur: pointer;
 }
 
 * {
@@ -114,10 +115,14 @@ body {
     left: 0;
     width: 100vw;
     height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 #background>img {
-    height: 100%;
+    min-height: 100%;
+    min-width: 100%;
     object-fit: cover;
 }
 
@@ -210,10 +215,10 @@ body {
     margin: auto;
     max-width: 600px;
     min-width: 450px;
-    width: 50%;
-    height: 500px;
+    width: 70%;
+    height: calc(100vh - 300px);
     border: 1px solid #7e7e7e;
-    border-radius: 20px;
+    border-radius: 5px;
     overflow-y: auto;
     background-color: #00000068;
 }
@@ -223,7 +228,7 @@ body {
 
 .itemsongPl {
     user-select: none;
-    cursor: pointer;
+    cursor: var(--cur);
     margin: 5px auto;
     width: 90%;
     padding: 5px 10px;
@@ -235,6 +240,7 @@ body {
 }
 
 .avtSongPlbox {
+    flex-shrink: 0;
     height: 4rem;
     aspect-ratio: 1;
     border-radius: 10%;
@@ -266,12 +272,28 @@ body {
     align-items: center;
 }
 
+*::-webkit-scrollbar-track {
+    border-radius: 10px;
+    background-color: #00000035;
+}
+
+*::-webkit-scrollbar {
+    width: 8px;
+    background-color: #57575722;
+}
+
+*::-webkit-scrollbar-thumb {
+    border-radius: 5px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, .3);
+    background-color: #b8b8b87d;
+}
+
 #checkAdFree {}
 
 @media screen and (max-width: 700px) {
     #plbox {
         min-width: 90%;
-        height: 400px;
+        height: calc(100vh - 300px);
     }
 }
 
