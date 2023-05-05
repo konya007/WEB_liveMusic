@@ -117,6 +117,7 @@
 }
 
 #progbar2 {
+    transition: all .6s linear;
     position: absolute;
     left: 0;
     top: 0;

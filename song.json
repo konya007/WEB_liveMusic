@@ -1,88 +1,104 @@
-[{
-        "name": "Requiem",
-        "singer": "Kanaria & Hatsume Miku",
-        "link": "https://cdn.glitch.global/dc6948cb-dff5-4efc-86db-fe258b6f1750/Requiem.mp3",
-        "img": "https://i.ytimg.com/vi/94FQd3qSoz8/maxresdefault.jpg"
-    }, {
-        "name": "Guitar, Loneliness and Blue Planet",
-        "singer": "Kessoku Band",
-        "link": "https://cdn.glitch.global/dc6948cb-dff5-4efc-86db-fe258b6f1750/Guitar%2C%20Loneliness%20and%20Blue%20Planet.mp3",
-        "img": "https://www.aniplexplus.com/on/demandware.static/-/Sites-all-master-catalog/ja_JP/dw0ee6a329/items/title-H/bocchi-rocks/PKG/ALBUM/600_JK.jpg"
-    }, {
-        "name": "Phony",
-        "singer": "Hoshimachi Suisei",
-        "link": "https://cdn.glitch.global/dc6948cb-dff5-4efc-86db-fe258b6f1750/Phony.mp3",
-        "img": "https://i1.sndcdn.com/artworks-FPruDZM0FJ52zmqB-O5UqHg-t500x500.jpg"
-    }, {
-        "name": "KickBack",
-        "singer": "Kenshi Yonezu",
-        "link": "https://cdn.glitch.global/dc6948cb-dff5-4efc-86db-fe258b6f1750/Kick%20Back%20-%20Kenshi%20Yonezu.mp3",
-        "img": "https://avatar-ex-swe.nixcdn.com/song/2022/10/12/a/8/5/9/1665562332462_640.jpg"
-    },
-    {
-        "name": "Compared Child",
-        "singer": "TUYU",
-        "link": "https://cdn.glitch.global/dc6948cb-dff5-4efc-86db-fe258b6f1750/Compared%20Child.mp3",
-        "img": "https://i.kfs.io/album/global/77276961,0v1/fit/500x500.jpg"
-    },
-    {
-        "name": "Idol",
-        "singer": "Yoasobi",
-        "link": "https://cdn.glitch.global/dc6948cb-dff5-4efc-86db-fe258b6f1750/Idol.mp3",
-        "img": "https://cdn.glitch.global/dc6948cb-dff5-4efc-86db-fe258b6f1750/Idol.jpg"
-    },
-    {
-        "name": "Fight Song",
-        "singer": "Eve",
-        "link": "https://cdn.glitch.global/dc6948cb-dff5-4efc-86db-fe258b6f1750/Fight%20Song%20%20-%20Eve.mp3",
-        "img": "https://cdn.glitch.global/dc6948cb-dff5-4efc-86db-fe258b6f1750/cover.jpg"
-    },
-
-    {
-        "name": "Hitorinbo Envy",
-        "singer": "25-ji, Nightcord de.",
-        "link": "https://cdn.glitch.global/dc6948cb-dff5-4efc-86db-fe258b6f1750/Hitorinbo_Envy.mp3",
-        "img": "https://cdn.glitch.global/dc6948cb-dff5-4efc-86db-fe258b6f1750/Hitorinbo_Envy.png"
-    },
-
-    {
-        "name": "Samsa",
-        "singer": "25-ji, Nightcord de.",
-        "link": "https://cdn.glitch.global/dc6948cb-dff5-4efc-86db-fe258b6f1750/Samsa.ogg",
-        "img": "https://cdn.glitch.global/dc6948cb-dff5-4efc-86db-fe258b6f1750/Samsa.webp"
-    },
-    {
-        "name": "I Nandesu",
-        "singer": "25-ji, Nightcord de.",
-        "link": "https://cdn.glitch.global/dc6948cb-dff5-4efc-86db-fe258b6f1750/I_Nandesu.mp3",
-        "img": "https://cdn.glitch.global/dc6948cb-dff5-4efc-86db-fe258b6f1750/I_Nandesu.webp"
-    },
-    {
-        "name": "Hitsuji ga Ippiki",
-        "singer": "Vivid BAD SQUAD",
-        "link": "https://cdn.glitch.global/dc6948cb-dff5-4efc-86db-fe258b6f1750/Hitsuji_ga_Ippiki.mp3",
-        "img": "https://cdn.glitch.global/dc6948cb-dff5-4efc-86db-fe258b6f1750/Hitsuji_ga_Ippiki.webp"
-    },
-    {
-        "name": "Identity",
-        "singer": "Hatsune Miku & Kanade",
-        "link": "https://cdn.glitch.global/dc6948cb-dff5-4efc-86db-fe258b6f1750/identity.mp3",
-        "img": "https://cdn.glitch.global/dc6948cb-dff5-4efc-86db-fe258b6f1750/Identity.webp"
-    },
-    {
-        "name": "Shoujo Rei",
-        "singer": "MORE MORE JUMP! & Hatsune Miku",
-        "link": "https://cdn.glitch.global/dc6948cb-dff5-4efc-86db-fe258b6f1750/Shoujo_Rei.mp3",
-        "img": "https://cdn.glitch.global/dc6948cb-dff5-4efc-86db-fe258b6f1750/Shoujo_rei.webp"
-    }, {
-        "name": "Nhạc Lofi #1: Tập trung",
-        "singer": "Angel Soul 天使の魂",
-        "link": "https://cdn.glitch.me/dc6948cb-dff5-4efc-86db-fe258b6f1750/lofi1.mp3",
-        "img": "https://i.ytimg.com/vi/REEr7EAl12k/maxresdefault.jpg"
-    }, {
-        "name": "Nhạc Lofi #2: Thư Giãn",
-        "singer": "Angel Soul 天使の魂",
-        "link": "https://cdn.glitch.me/dc6948cb-dff5-4efc-86db-fe258b6f1750/lofi2.mp3",
-        "img": "https://i.ytimg.com/vi/REEr7EAl12k/maxresdefault.jpg"
-    }
+[
+ {
+  "name": "Mephisto",
+  "singer": "Queen Bee",
+  "link": "https://cdn.glitch.global/dc6948cb-dff5-4efc-86db-fe258b6f1750/Mephisto.mp3",
+  "img": "https://static.wikia.nocookie.net/oshi_no_ko/images/9/9d/Queen_Bee_Mephisto_Anime_Visual.jpg"
+ },
+ {
+  "name": "Idol",
+  "singer": "Yoasobi",
+  "link": "https://cdn.glitch.global/dc6948cb-dff5-4efc-86db-fe258b6f1750/Idol.mp3",
+  "img": "https://cdn.glitch.global/dc6948cb-dff5-4efc-86db-fe258b6f1750/Idol.jpg"
+ },
+ {
+  "name": "BGM Space Walk - HSR",
+  "singer": "Hoyo - Mix",
+  "link": "https://cdn.glitch.global/dc6948cb-dff5-4efc-86db-fe258b6f1750/Herta%20Space%20Station%20OST%20Extended%20%20Honkai%20Star%20Rail.mp3",
+  "img": "https://pbs.twimg.com/profile_images/1512125928343805959/8j58JgKV_400x400.jpg"
+ },
+ {
+  "name": "Requiem",
+  "singer": "Kanaria & Hatsume Miku",
+  "link": "https://cdn.glitch.global/dc6948cb-dff5-4efc-86db-fe258b6f1750/Requiem.mp3",
+  "img": "https://i1.sndcdn.com/artworks-iyCkr8qWQpl1d3A7-TQ7ySA-t500x500.jpg"
+ },
+ {
+  "name": "Guitar, Loneliness and Blue Planet",
+  "singer": "Kessoku Band",
+  "link": "https://cdn.glitch.global/dc6948cb-dff5-4efc-86db-fe258b6f1750/Guitar%2C%20Loneliness%20and%20Blue%20Planet.mp3",
+  "img": "https://www.aniplexplus.com/on/demandware.static/-/Sites-all-master-catalog/ja_JP/dw0ee6a329/items/title-H/bocchi-rocks/PKG/ALBUM/600_JK.jpg"
+ },
+ {
+  "name": "Phony",
+  "singer": "Hoshimachi Suisei",
+  "link": "https://cdn.glitch.global/dc6948cb-dff5-4efc-86db-fe258b6f1750/Phony.mp3",
+  "img": "https://i1.sndcdn.com/artworks-FPruDZM0FJ52zmqB-O5UqHg-t500x500.jpg"
+ },
+ {
+  "name": "KickBack",
+  "singer": "Kenshi Yonezu",
+  "link": "https://cdn.glitch.global/dc6948cb-dff5-4efc-86db-fe258b6f1750/Kick%20Back%20-%20Kenshi%20Yonezu.mp3",
+  "img": "https://avatar-ex-swe.nixcdn.com/song/2022/10/12/a/8/5/9/1665562332462_640.jpg"
+ },
+ {
+  "name": "Compared Child",
+  "singer": "TUYU",
+  "link": "https://cdn.glitch.global/dc6948cb-dff5-4efc-86db-fe258b6f1750/Compared%20Child.mp3",
+  "img": "https://i.kfs.io/album/global/77276961,0v1/fit/500x500.jpg"
+ },
+ {
+  "name": "Fight Song",
+  "singer": "Eve",
+  "link": "https://cdn.glitch.global/dc6948cb-dff5-4efc-86db-fe258b6f1750/Fight%20Song%20%20-%20Eve.mp3",
+  "img": "https://cdn.glitch.global/dc6948cb-dff5-4efc-86db-fe258b6f1750/cover.jpg"
+ },
+ {
+  "name": "Hitorinbo Envy",
+  "singer": "25-ji, Nightcord de.",
+  "link": "https://cdn.glitch.global/dc6948cb-dff5-4efc-86db-fe258b6f1750/Hitorinbo_Envy.mp3",
+  "img": "https://cdn.glitch.global/dc6948cb-dff5-4efc-86db-fe258b6f1750/Hitorinbo_Envy.png"
+ },
+ {
+  "name": "Samsa",
+  "singer": "25-ji, Nightcord de.",
+  "link": "https://cdn.glitch.global/dc6948cb-dff5-4efc-86db-fe258b6f1750/Samsa.ogg",
+  "img": "https://cdn.glitch.global/dc6948cb-dff5-4efc-86db-fe258b6f1750/Samsa.webp"
+ },
+ {
+  "name": "I Nandesu",
+  "singer": "25-ji, Nightcord de.",
+  "link": "https://cdn.glitch.global/dc6948cb-dff5-4efc-86db-fe258b6f1750/I_Nandesu.mp3",
+  "img": "https://cdn.glitch.global/dc6948cb-dff5-4efc-86db-fe258b6f1750/I_Nandesu.webp"
+ },
+ {
+  "name": "Hitsuji ga Ippiki",
+  "singer": "Vivid BAD SQUAD",
+  "link": "https://cdn.glitch.global/dc6948cb-dff5-4efc-86db-fe258b6f1750/Hitsuji_ga_Ippiki.mp3",
+  "img": "https://cdn.glitch.global/dc6948cb-dff5-4efc-86db-fe258b6f1750/Hitsuji_ga_Ippiki.webp"
+ },
+ {
+  "name": "Identity",
+  "singer": "Hatsune Miku & Kanade",
+  "link": "https://cdn.glitch.global/dc6948cb-dff5-4efc-86db-fe258b6f1750/identity.mp3",
+  "img": "https://cdn.glitch.global/dc6948cb-dff5-4efc-86db-fe258b6f1750/Identity.webp"
+ },
+ {
+  "name": "Shoujo Rei",
+  "singer": "MORE MORE JUMP! & Hatsune Miku",
+  "link": "https://cdn.glitch.global/dc6948cb-dff5-4efc-86db-fe258b6f1750/Shoujo_Rei.mp3",
+  "img": "https://cdn.glitch.global/dc6948cb-dff5-4efc-86db-fe258b6f1750/Shoujo_rei.webp"
+ },
+ {
+  "name": "Nhạc Lofi #1: Tập trung",
+  "singer": "Angel Soul 天使の魂",
+  "link": "https://cdn.glitch.me/dc6948cb-dff5-4efc-86db-fe258b6f1750/lofi1.mp3",
+  "img": "https://i.ytimg.com/vi/REEr7EAl12k/maxresdefault.jpg"
+ },
+ {
+  "name": "Nhạc Lofi #2: Thư Giãn",
+  "singer": "Angel Soul 天使の魂",
+  "link": "https://cdn.glitch.me/dc6948cb-dff5-4efc-86db-fe258b6f1750/lofi2.mp3",
+  "img": "https://i.ytimg.com/vi/REEr7EAl12k/maxresdefault.jpg"
+ }
 ]

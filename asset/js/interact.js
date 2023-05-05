@@ -82,19 +82,16 @@ function clientInt() {
 
         }
         if (dataClient["status"] == 'play') {
-            if (statusPlay == 'pause') {
-                playAudioMain()
-            }
+
+            playAudioMain()
+
             var timeTemp = dataClient["time"] + ((Date.now() / 1000) - dataClient["nowTime"])
             if (Math.abs(timeTemp - audioMain.currentTime) > 0.08) {
                 audioMain.currentTime = timeTemp
             }
 
         } else {
-            if (statusPlay == 'play') {
-                pauseAudioMain()
-            }
-
+            pauseAudioMain()
         }
 
         console.log("ok Client")
